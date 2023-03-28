@@ -35,7 +35,7 @@ def colorify(img, scale):
 	maxx = min(new_height - 1, np.max(colored[1]) + 5)
 	#breakpoint()
 	img = img[miny : maxy, minx : maxx, :]
-	print(img.shape)
+	#print(img.shape)
 	colored = np.where(img != [0,0,0])
 	#colored = np.where(img == [240,240,240])
 	#breakpoint()
@@ -92,9 +92,10 @@ background_dir = './backgrounds/'
 background_files = os.listdir(background_dir)
 
 for i in range(int(sys.argv[1])):
+	print(f'{i} of {sys.argv[1]}')
 
 	fpath = background_dir + random.choice(background_files)
-	print(fpath)
+	#print(fpath)
 	background_img = cv2.imread(fpath)
 	background_height, background_width, background_dims = background_img.shape
 
@@ -107,7 +108,7 @@ for i in range(int(sys.argv[1])):
 
 	annotation = ''
 
-	print('Number of objects:', num_objects)
+	#print('Number of objects:', num_objects)
 	for num in range(num_objects):
 		shape_f = random.choice(shape_files)
 		letter_f = random.choice(letter_files)
