@@ -133,7 +133,7 @@ for i in range(int(sys.argv[1])):
 
 	#cv2.imshow('Superimposition', final)
 	#cv2.waitKey(0)
-	finished_folder = f'./dataset/{sys.argv[2]}/'
+	finished_folder = f'./data/{sys.argv[2]}/'
 	cv2.imwrite(finished_folder + 'images/' + str(i) + '.png', background_img)
 
 	h = open(finished_folder + 'labels/' + str(i) + '.txt', 'w')

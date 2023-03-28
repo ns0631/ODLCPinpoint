@@ -1,6 +1,6 @@
 import os
 
-path = './dataset/'
+path = './data/'
 
 folders = ['train/', 'valid/', 'test/']
 sub_directories = ['images/', 'labels/']
