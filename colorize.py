@@ -129,14 +129,14 @@ for i in range(int(sys.argv[1])):
 		#print(centerx, centery)
 		background_img = paste(background_img, final, centerx, centery)
 
-		annotation += f'1 {centerx/background_width} {centery/background_height} {width/background_width} {height/background_height}\n'
+		annotation += f'0 {centerx/background_width} {centery/background_height} {1.5 * width/background_width} {1.5 * height/background_height}\n'
 
 	#cv2.imshow('Superimposition', final)
 	#cv2.waitKey(0)
-	finished_folder = f'./data/{sys.argv[2]}/'
-	cv2.imwrite(finished_folder + 'images/' + str(i) + '.png', background_img)
+	finished_folder = f'./dataset/{sys.argv[2]}/'
+	cv2.imwrite(f'./dataset/images/{sys.argv[2]}/' + str(i) + '.png', background_img)
 
-	h = open(finished_folder + 'labels/' + str(i) + '.txt', 'w')
+	h = open(f'./dataset/labels/{sys.argv[2]}/' + str(i) + '.txt', 'w')
 	h.write(annotation)
 	h.close()
 
