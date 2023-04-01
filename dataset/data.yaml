@@ -1,5 +1,5 @@
 train: /content/dataset/images/train
-val: /content/dataset/images/val
+val: /content/dataset/images/valid
 test: /content/dataset/images/test
 
 nc: 1
