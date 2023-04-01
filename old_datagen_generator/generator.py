@@ -120,7 +120,8 @@ if '.DS_Store' in font_list:
 def main():
     global count
     #base_number = int(sys.argv[1]) + 1
-    base_number = 1
+    img_dir = f'../dataset/images/{sys.argv[2]}/'
+    base_number = len(os.listdir(img_dir)) + 1
     GEN = int(sys.argv[1])
     for i in range(GEN):
         # Get image attributes, resize
