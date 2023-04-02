@@ -32,7 +32,7 @@ def colorify(img, scale):
 	miny = max(0, np.min(colored[0]) - 5)
 	maxy = min(new_height - 1, np.max(colored[0]) + 5)
 	minx = max(0, np.min(colored[1]) - 5)
-	maxx = min(new_height - 1, np.max(colored[1]) + 5)
+	maxx = min(new_width - 1, np.max(colored[1]) + 5)
 	#breakpoint()
 	img = img[miny : maxy, minx : maxx, :]
 	#print(img.shape)
